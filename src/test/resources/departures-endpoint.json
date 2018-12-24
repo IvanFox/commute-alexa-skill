@@ -1,0 +1,123 @@
+{
+  "Stop": {
+    "Id": "tal_14902-1",
+    "Name": "Majaka põik",
+    "Direction": "Towards Ülemiste jaam",
+    "Coordinate": {
+      "Lat": 59.426509857177734,
+      "Lng": 24.79640007019043
+    }
+  },
+  "Schedules": [
+    {
+      "ScheduleId": "tal_tram_2",
+      "TrackId": "a-b",
+      "Name": "2",
+      "Destination": "Paala",
+      "IconUrl": "https://cdn.trafi.com/icon.ashx?size=64&style=v2&src=transport/tal_tram_tram_FF601E_2",
+      "Color": "FF601E",
+      "Departures": [
+        {
+          "TimeUtc": 1545643414,
+          "TimeLocal": "11:23:34",
+          "RemainingMinutes": 0,
+          "IsRealtime": true,
+          "VehicleId": "tal_508",
+          "TrackId": "a-b",
+          "Destination": "Paala"
+        },
+        {
+          "TimeUtc": 1545643957,
+          "TimeLocal": "11:32:37",
+          "RemainingMinutes": 7,
+          "IsRealtime": true,
+          "VehicleId": "tal_103",
+          "TrackId": "a-b",
+          "Destination": "Paala"
+        },
+        {
+          "TimeUtc": 1545644606,
+          "TimeLocal": "11:43:26",
+          "RemainingMinutes": 18,
+          "IsRealtime": true,
+          "VehicleId": "tal_515",
+          "TrackId": "a-b",
+          "Destination": "Paala"
+        },
+        {
+          "TimeUtc": 1545645174,
+          "TimeLocal": "11:52:54",
+          "RemainingMinutes": 27,
+          "IsRealtime": true,
+          "VehicleId": "tal_182",
+          "TrackId": "a-b",
+          "Destination": "Paala"
+        },
+        {
+          "TimeUtc": 1545645960,
+          "TimeLocal": "12:06:00",
+          "RemainingMinutes": 40,
+          "IsRealtime": false,
+          "VehicleId": "",
+          "TrackId": "a-b",
+          "Destination": "Paala"
+        }
+      ]
+    },
+    {
+      "ScheduleId": "tal_tram_4",
+      "TrackId": "a-b",
+      "Name": "4",
+      "Destination": "Lennujaam",
+      "IconUrl": "https://cdn.trafi.com/icon.ashx?size=64&style=v2&src=transport/tal_tram_tram_FF601E_4",
+      "Color": "FF601E",
+      "Departures": [
+        {
+          "TimeUtc": 1545643653,
+          "TimeLocal": "11:27:33",
+          "RemainingMinutes": 2,
+          "IsRealtime": true,
+          "VehicleId": "tal_503",
+          "TrackId": "a-b",
+          "Destination": "Lennujaam"
+        },
+        {
+          "TimeUtc": 1545644469,
+          "TimeLocal": "11:41:09",
+          "RemainingMinutes": 16,
+          "IsRealtime": true,
+          "VehicleId": "tal_514",
+          "TrackId": "a-b",
+          "Destination": "Lennujaam"
+        },
+        {
+          "TimeUtc": 1545645120,
+          "TimeLocal": "11:52:00",
+          "RemainingMinutes": 26,
+          "IsRealtime": false,
+          "VehicleId": "",
+          "TrackId": "a-b",
+          "Destination": "Lennujaam"
+        },
+        {
+          "TimeUtc": 1545645720,
+          "TimeLocal": "12:02:00",
+          "RemainingMinutes": 36,
+          "IsRealtime": false,
+          "VehicleId": "",
+          "TrackId": "a-b",
+          "Destination": "Lennujaam"
+        },
+        {
+          "TimeUtc": 1545646320,
+          "TimeLocal": "12:12:00",
+          "RemainingMinutes": 46,
+          "IsRealtime": false,
+          "VehicleId": "",
+          "TrackId": "a-b",
+          "Destination": "Lennujaam"
+        }
+      ]
+    }
+  ]
+}
