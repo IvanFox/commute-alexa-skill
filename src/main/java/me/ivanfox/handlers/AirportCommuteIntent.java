@@ -12,22 +12,22 @@ import me.ivanfox.messages.Departures;
 import me.ivanfox.messages.Schedule;
 import me.ivanfox.services.TrafiController;
 
-public class WorkCommuteIntentHandler implements RequestHandler {
+public class AirportCommuteIntent implements RequestHandler {
 
     @Override
     public boolean canHandle(HandlerInput input) {
-        return input.matches(intentName("WorkCommute"));
+        return input.matches(intentName("AirportCommute"));
     }
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        Schedule tram4Schedule = TrafiController.findTram4FromHomeToCentre();
+        Schedule tram4Schedule = TrafiController.findTram4FromHomeToAirport();
 
         List<String> tram4 = tram4Schedule.getDepartures().stream()
             .map(Departures::getRemainingMinutes)
             .collect(Collectors.toList());
 
-        String speechText = "Tram number 4 is going to city centre... in  " + String.join(", ", tram4.subList(0, 2)) + " minutes";
+        String speechText = "Tram number 4 is going to airport... in  " + String.join(", ", tram4.subList(0, 2)) + " minutes";
         return input.getResponseBuilder()
             .withSpeech(speechText)
             .withSimpleCard("HelloWorld", speechText)

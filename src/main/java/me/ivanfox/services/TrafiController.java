@@ -7,6 +7,7 @@ import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.core.MediaType;
 import me.ivanfox.messages.DeparturesResponse;
+import me.ivanfox.messages.Schedule;
 import me.ivanfox.utils.TallinnStopConstants;
 
 public class TrafiController {
@@ -20,9 +21,9 @@ public class TrafiController {
 
     private final static Client CLIENT = ClientBuilder.newClient();
 
-    public static DeparturesResponse findMajakaToCentr() {
+    public static DeparturesResponse findDepartures(String stopId) {
         String rawResponse = CLIENT.target(
-                BASE_URL + String.format(DEPARTURES_ENDPOINT, TallinnStopConstants.MAJAKA_POIK_TOWARDS_AIRPORT_ID)
+                BASE_URL + String.format(DEPARTURES_ENDPOINT, stopId)
             ).request(MediaType.APPLICATION_JSON)
             .get(String.class);
 
@@ -30,8 +31,15 @@ public class TrafiController {
 
     }
 
+    public static Schedule findTram4FromHomeToCentre() {
+        return findDepartures(TallinnStopConstants.MAJAKA_POIK_TOWARDS_CITY_CENTRE_ID).getSchedules().get(1);
+    }
+
+    public static Schedule findTram4FromHomeToAirport() {
+        return findDepartures(TallinnStopConstants.MAJAKA_POIK_TOWARDS_AIRPORT_ID).getSchedules().get(1);
+    }
 
     public static void main(String[] args) {
-        findMajakaToCentr();
+        System.out.println(findTram4FromHomeToCentre());
     }
 }
